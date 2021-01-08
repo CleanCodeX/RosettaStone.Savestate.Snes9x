@@ -9,7 +9,7 @@ namespace SavestateFormat.Snes9x.Extensions
 	    public static FileBlock ReadFileBlock(this Stream source)
         {
 	        var block = new FileBlock(true);
-	        var reader = new BinaryReader(source, Encoding.ASCII);
+	        var reader = new BinaryReader(source, Encoding.ASCII, true);
 			var length = source.Length;
 
 	        if (source.Position == length) return default;

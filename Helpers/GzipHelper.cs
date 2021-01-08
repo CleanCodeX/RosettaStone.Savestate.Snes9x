@@ -16,7 +16,7 @@ namespace SavestateFormat.Snes9x.Helpers
 		public static byte[] Compress(byte[] bytes)
 		{
 			using var memoryStream = new MemoryStream();
-			using var gZipStream = new GZipStream(memoryStream, CompressionMode.Compress);
+			using var gZipStream = new GZipStream(memoryStream, CompressionMode.Compress, true);
 
 			gZipStream.Write(bytes);
 
@@ -32,7 +32,7 @@ namespace SavestateFormat.Snes9x.Helpers
 
 		public static byte[] Decompress(Stream stream)
 		{
-			using var gZipStream = new GZipStream(stream, CompressionMode.Decompress);
+			using var gZipStream = new GZipStream(stream, CompressionMode.Decompress, true);
 			using var memoryStreamOutput = new MemoryStream();
 
 			gZipStream.CopyTo(memoryStreamOutput);
