@@ -3,11 +3,11 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.0.1</Version>
-		<PackageTags>Snes9x, Savestate, Snes</PackageTags>
+		<Version>0.0.1-a1</Version>
+		<PackageTags>Snes9x, Savestate, SNES, SRAM</PackageTags>
 		<Authors>CleanCodeX</Authors>
 		<Description>Snes9x's savestate model, load functionality</Description>
-		<Company>CleanCodeX</Company>
+		<Company>KST</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -23,11 +23,12 @@
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<Optimize>true</Optimize>
 	</PropertyGroup>
 
 	<ItemGroup>
