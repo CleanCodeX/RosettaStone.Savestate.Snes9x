@@ -7,6 +7,6 @@ namespace SavestateFormat.Snes9x.Extensions
 	{
 		public static Stream GetSramStream(this Savestate source) => new MemoryStream(source.SRA.Data);
 		public static Stream GetWramStream(this Savestate source) => new MemoryStream(source.RAM.Data);
-		public static Stream GetDmaStream(this Savestate source) => new MemoryStream(source.DMA.Data);
+		public static Stream GetFillRamStream(this Savestate source) => new MemoryStream(source.FIL.Data);
 	}
 }

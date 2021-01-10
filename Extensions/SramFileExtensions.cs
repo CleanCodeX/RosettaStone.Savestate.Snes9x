@@ -7,9 +7,9 @@ namespace SavestateFormat.Snes9x.Extensions
 {
 	public static class SramFileExtensions
 	{
-		public static void Load([NotNull] this ISramFile source, string filePath) => source.Load(GetSramStream(filePath));
+		public static void LoadSavestateSram([NotNull] this ISramFile source, string filePath) => source.Load(GetSramStream(filePath));
 
-		public static void Load<TSaveSlot>([NotNull] this ISramFile<TSaveSlot> source, string filePath)
+		public static void LoadSavestateSram<TSaveSlot>([NotNull] this ISramFile<TSaveSlot> source, string filePath)
 			where TSaveSlot : struct =>
 			source.Load(GetSramStream(filePath));
 

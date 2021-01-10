@@ -4,9 +4,13 @@ namespace SavestateFormat.Snes9x.Extensions
 {
 	public static class HeaderExtensions
 	{
-		public static bool IsValidSnes9xHeader(this Header source) => new string(source.Signature) == "#!s9xsnp"
-														  && source.Colon == ':'
-		                                                  && new string(source.Version) == "0011"
-		                                                  && source.LineFeed == '\n';
+		private const string CurrentVersion = "0011";
+
+		public static bool IsValid(this Header source) => source.IsValid(CurrentVersion);
+		public static bool IsValid(this Header source, string versionToCheck) =>
+			new string(source.Signature) == "#!s9xsnp"
+			&& source.Colon == ':'
+			&& new string(source.Version) == versionToCheck
+			&& source.LineFeed == '\n';
 	}
 }
