@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<Version>0.0.1-a4</Version>
 		<PackageTags>Snes9x, Savestate, SNES, SRAM</PackageTags>
-		<Authors>CleanCodeX</Authors>
+		<Authors>CleanCoderX</Authors>
 		<Description>Snes9x's savestate model, load functionality</Description>
 		<Company>KST</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
