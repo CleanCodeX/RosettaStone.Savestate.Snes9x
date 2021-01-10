@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.0.1-a3</Version>
+		<Version>0.0.1-a4</Version>
 		<PackageTags>Snes9x, Savestate, SNES, SRAM</PackageTags>
 		<Authors>CleanCodeX</Authors>
 		<Description>Snes9x's savestate model, load functionality</Description>
@@ -32,7 +32,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramCommons" Version="1.0.3-a2" />
+		<PackageReference Include="CCX.SramCommons" Version="1.0.3-a3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -56,7 +56,6 @@
 
 	<ItemGroup>
 	  <None Include="Extensions\StreamExtensions.Sram.cs" />
-	  <None Include="Extensions\StreamExtensions.FileBlock.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
