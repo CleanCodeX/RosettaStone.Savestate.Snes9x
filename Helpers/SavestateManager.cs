@@ -19,7 +19,7 @@ namespace SavestateFormat.Snes9x.Helpers
 		public Savestate Load(in string filepath) => Load(filepath, SavestateLoadIncludeOffset.SRA);
 		public Savestate Load(in string filepath, in SavestateLoadIncludeOffset includeOffset)
 		{
-			using var file = new FileStream(filepath, FileMode.Open, FileAccess.Read);
+			using var file = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 			Savestate result = default;
 
 			if (file.CanRead)
