@@ -2,7 +2,7 @@
 using System.IO.Compression;
 using System.Text;
 
-namespace SavestateFormat.Snes9x.Helpers
+namespace RosettaStone.Savestate.Snes9x.Helpers
 {
 	public static class GzipHelper
 	{

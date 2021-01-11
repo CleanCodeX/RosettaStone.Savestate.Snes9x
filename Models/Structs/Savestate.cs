@@ -1,4 +1,4 @@
-﻿namespace SavestateFormat.Snes9x.Models.Structs
+﻿namespace RosettaStone.Savestate.Snes9x.Models.Structs
 {
 	/// <summary>
 	/// Format according to specs at https://www.romhacking.net/documents/383/

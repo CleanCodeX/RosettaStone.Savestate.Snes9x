@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using SavestateFormat.Snes9x.Helpers;
+using RosettaStone.Savestate.Snes9x.Helpers;
 
-namespace SavestateFormat.Snes9x.Extensions
+namespace RosettaStone.Savestate.Snes9x.Extensions
 {
 	public static partial class StreamExtensions
     {

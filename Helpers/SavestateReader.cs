@@ -1,21 +1,21 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using SavestateFormat.Snes9x.Extensions;
-using SavestateFormat.Snes9x.Models.Structs;
+using RosettaStone.Savestate.Snes9x.Extensions;
+using RosettaStone.Savestate.Snes9x.Models.Structs;
 
-namespace SavestateFormat.Snes9x.Helpers
+namespace RosettaStone.Savestate.Snes9x.Helpers
 {
 	internal static class SavestateReader
 	{
 		private const string CurrentVersion = "0011";
 
-		public static Savestate Load(in string filepath) => Load(filepath, LoadIncludeOffset.SRA);
-		public static Savestate Load(in string filepath, in LoadIncludeOffset includeOffset)
+		public static Models.Structs.Savestate Load(in string filepath) => Load(filepath, LoadIncludeOffset.SRA);
+		public static Models.Structs.Savestate Load(in string filepath, in LoadIncludeOffset includeOffset)
 		{
 			using var file = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read);
 
-			Savestate result = default;
+			Models.Structs.Savestate result = default;
 
 			if (file.CanRead)
 				result = Load(file, includeOffset);
@@ -25,8 +25,8 @@ namespace SavestateFormat.Snes9x.Helpers
 			return result;
 		}
 
-		public static Savestate Load(in Stream stream) => Load(stream, LoadIncludeOffset.SRA);
-		public static Savestate Load(in Stream stream, in LoadIncludeOffset includeOffset)
+		public static Models.Structs.Savestate Load(in Stream stream) => Load(stream, LoadIncludeOffset.SRA);
+		public static Models.Structs.Savestate Load(in Stream stream, in LoadIncludeOffset includeOffset)
 		{
 			if (stream.Position != 0)
 				stream.Position = 0;
@@ -38,7 +38,7 @@ namespace SavestateFormat.Snes9x.Helpers
 			if (!header.IsValid(CurrentVersion))
 				throw new ArgumentException($"Invalid header: [{header.GetString()}]. Supported version: {CurrentVersion}");
 
-			Savestate result = new()
+			Models.Structs.Savestate result = new()
 			{
 				Header = header,
 				NAM = ReadFileBlock(ms),

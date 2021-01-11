@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SavestateFormat.Snes9x.Helpers
+namespace RosettaStone.Savestate.Snes9x.Helpers
 {
 	[Flags]
 	public enum LoadIncludeOffset

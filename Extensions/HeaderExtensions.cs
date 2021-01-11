@@ -1,6 +1,6 @@
-﻿using SavestateFormat.Snes9x.Models.Structs;
+﻿using RosettaStone.Savestate.Snes9x.Models.Structs;
 
-namespace SavestateFormat.Snes9x.Extensions
+namespace RosettaStone.Savestate.Snes9x.Extensions
 {
 	public static class HeaderExtensions
 	{

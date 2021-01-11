@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SavestateFormat.Snes9x.Models.Structs
+namespace RosettaStone.Savestate.Snes9x.Models.Structs
 {
 	[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1, Size = 14)]
 	public struct Header

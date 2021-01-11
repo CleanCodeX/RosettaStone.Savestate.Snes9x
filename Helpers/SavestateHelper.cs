@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using SavestateFormat.Snes9x.Extensions;
+using RosettaStone.Savestate.Snes9x.Extensions;
 
-namespace SavestateFormat.Snes9x.Helpers
+namespace RosettaStone.Savestate.Snes9x.Helpers
 {
 	public static class SavestateHelper
 	{

@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using Common.Shared.Min.Extensions;
-using SavestateFormat.Snes9x.Helpers;
+using RosettaStone.Savestate.Snes9x.Helpers;
 using SramCommons.Models;
 
-namespace SavestateFormat.Snes9x.Extensions
+namespace RosettaStone.Savestate.Snes9x.Extensions
 {
 	public static class SramFileExtensions
 	{

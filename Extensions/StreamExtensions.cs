@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using SramCommons.Extensions;
 
-namespace SavestateFormat.Snes9x.Extensions
+namespace RosettaStone.Savestate.Snes9x.Extensions
 {
 	public static partial class StreamExtensions
 	{
