@@ -3,10 +3,10 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.0.1-a1</Version>
-		<PackageTags>Snes9x, Savestate, SNES, SRAM</PackageTags>
+		<Version>0.0.1-a2</Version>
+		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, Rosetta, Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
 		<Authors>CleanCoderX</Authors>
-		<Description>Snes9x's savestate model, load functionality</Description>
+		<Description>Snes9x's savestate format load functionality</Description>
 		<Company>KST</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -15,6 +15,10 @@
 		<PackageId>CCX.RosettaStone.Savestate.Snes9x</PackageId>
 		<Product>RosettaStone.Savestate.Snes9x</Product>
 		<Platforms>AnyCPU</Platforms>
+		<PackageIcon>Logo.png</PackageIcon>
+		<PackageProjectUrl>http://rosetta-stone.xeth.de</PackageProjectUrl>
+		<Copyright></Copyright>
+		<RepositoryType>Rosetta Stone</RepositoryType>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -56,6 +60,10 @@
 
 	<ItemGroup>
 	  <None Include="Extensions\StreamExtensions.Sram.cs" />
+	  <None Include="Logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 
 	<ItemGroup>
