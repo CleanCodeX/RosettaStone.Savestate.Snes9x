@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.0.1-a2</Version>
+		<Version>0.0.1-a3</Version>
 		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, Rosetta, Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
 		<Authors>CleanCoderX</Authors>
 		<Description>Snes9x's savestate format load functionality</Description>
@@ -28,11 +28,15 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<DebugType>full</DebugType>
+		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
 		<Optimize>true</Optimize>
+		<DebugType>embedded</DebugType>
+		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
 
 	<ItemGroup>
