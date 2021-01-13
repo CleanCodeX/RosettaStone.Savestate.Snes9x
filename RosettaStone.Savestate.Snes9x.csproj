@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.0.1-a4</Version>
+		<Version>0.0.1-b1</Version>
 		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, Rosetta, Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
 		<Authors>CleanCoderX</Authors>
 		<Description>Snes9x's savestate format load functionality</Description>
@@ -40,10 +40,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramCommons" Version="1.0.4-a1" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
@@ -67,6 +63,14 @@
 	    <Pack>True</Pack>
 	    <PackagePath></PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CCX.SramCommons" Version="1.0.4-a1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SramCommons\SramCommons.csproj" />
 	</ItemGroup>
 
 </Project>
