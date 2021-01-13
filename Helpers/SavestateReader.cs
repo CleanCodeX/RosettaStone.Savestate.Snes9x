@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using RosettaStone.Savestate.Snes9x.Extensions;
 using RosettaStone.Savestate.Snes9x.Models.Structs;
+using SramCommons.Extensions;
 
 namespace RosettaStone.Savestate.Snes9x.Helpers
 {
@@ -10,23 +11,23 @@ namespace RosettaStone.Savestate.Snes9x.Helpers
 	{
 		private const string CurrentVersion = "0011";
 
-		public static Models.Structs.Savestate Load(in string filepath) => Load(filepath, LoadIncludeOffset.SRA);
-		public static Models.Structs.Savestate Load(in string filepath, in LoadIncludeOffset includeOffset)
+		public static SavestateSnex9x Load(in string filePath) => Load(filePath, LoadIncludeOffset.SRA);
+		public static SavestateSnex9x Load(in string filePath, in LoadIncludeOffset includeOffset)
 		{
-			using var file = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read);
+			using var file = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
 
-			Models.Structs.Savestate result = default;
+			SavestateSnex9x result;
 
 			if (file.CanRead)
 				result = Load(file, includeOffset);
 			else
-				Console.WriteLine("SavestateEmpty");
+				throw new ArgumentException("Savestate is empty.");
 
 			return result;
 		}
 
-		public static Models.Structs.Savestate Load(in Stream stream) => Load(stream, LoadIncludeOffset.SRA);
-		public static Models.Structs.Savestate Load(in Stream stream, in LoadIncludeOffset includeOffset)
+		public static SavestateSnex9x Load(in Stream stream) => Load(stream, LoadIncludeOffset.SRA);
+		public static SavestateSnex9x Load(in Stream stream, in LoadIncludeOffset includeOffset)
 		{
 			if (stream.Position != 0)
 				stream.Position = 0;
@@ -38,7 +39,7 @@ namespace RosettaStone.Savestate.Snes9x.Helpers
 			if (!header.IsValid(CurrentVersion))
 				throw new ArgumentException($"Invalid header: [{header.GetString()}]. Supported version: {CurrentVersion}");
 
-			Models.Structs.Savestate result = new()
+			SavestateSnex9x result = new()
 			{
 				Header = header,
 				NAM = ReadFileBlock(ms),

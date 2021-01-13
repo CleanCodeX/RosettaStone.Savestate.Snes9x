@@ -3,7 +3,7 @@
 	/// <summary>
 	/// Format according to specs at https://www.romhacking.net/documents/383/
 	/// </summary>
-	public struct Savestate
+	public struct SavestateSnex9x
 	{
 		public Header Header;
 
