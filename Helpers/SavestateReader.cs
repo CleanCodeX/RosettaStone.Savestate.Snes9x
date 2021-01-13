@@ -6,7 +6,7 @@ using RosettaStone.Savestate.Snes9x.Models.Structs;
 
 namespace RosettaStone.Savestate.Snes9x.Helpers
 {
-	internal static class SavestateReader
+	public static class SavestateReader
 	{
 		private const string CurrentVersion = "0011";
 
