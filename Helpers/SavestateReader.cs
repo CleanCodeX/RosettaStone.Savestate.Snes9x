@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Text;
+using Common.Shared.Min.Extensions;
 using RosettaStone.Savestate.Snes9x.Extensions;
 using RosettaStone.Savestate.Snes9x.Models.Structs;
 using SramCommons.Extensions;
@@ -11,9 +13,11 @@ namespace RosettaStone.Savestate.Snes9x.Helpers
 	{
 		private const string CurrentVersion = "0011";
 
-		public static SavestateSnex9x Load(in string filePath) => Load(filePath, LoadIncludeOffset.SRA);
-		public static SavestateSnex9x Load(in string filePath, in LoadIncludeOffset includeOffset)
+		public static SavestateSnex9x Load([NotNull] in string filePath) => Load(filePath, LoadIncludeOffset.SRA);
+		public static SavestateSnex9x Load([NotNull] in string filePath, in LoadIncludeOffset includeOffset)
 		{
+			filePath.ThrowIfNull(nameof(filePath));
+
 			using var file = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
 
 			SavestateSnex9x result;
@@ -26,11 +30,11 @@ namespace RosettaStone.Savestate.Snes9x.Helpers
 			return result;
 		}
 
-		public static SavestateSnex9x Load(in Stream stream) => Load(stream, LoadIncludeOffset.SRA);
-		public static SavestateSnex9x Load(in Stream stream, in LoadIncludeOffset includeOffset)
+		public static SavestateSnex9x Load([NotNull] in Stream stream) => Load(stream, LoadIncludeOffset.SRA);
+		public static SavestateSnex9x Load([NotNull] in Stream stream, in LoadIncludeOffset includeOffset)
 		{
-			if (stream.Position != 0)
-				stream.Position = 0;
+			stream.ThrowIfNull(nameof(stream));
+			stream.Position = 0;
 
 			var uncompressed = GzipHelper.Decompress(stream);
 			var ms = new MemoryStream(uncompressed);

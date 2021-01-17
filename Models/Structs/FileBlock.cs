@@ -2,6 +2,7 @@
 
 namespace RosettaStone.Savestate.Snes9x.Models.Structs
 {
+	/// <summary>Snes9x savestate file block</summary>
 	public struct FileBlock
 	{
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
@@ -12,6 +13,7 @@ namespace RosettaStone.Savestate.Snes9x.Models.Structs
 		public char Sepatator2;
 		public byte[] Data;
 
+		// ReSharper disable once UnusedParameter.Local
 		public FileBlock(bool init)
 		{
 			Name = new char[3];

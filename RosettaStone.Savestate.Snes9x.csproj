@@ -3,10 +3,10 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.1.0-a3</Version>
-		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, Rosetta, Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
+		<Version>0.1.1-a1</Version>
+		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, W-RAM, WRAM, Rosetta Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
 		<Authors>CleanCoderX</Authors>
-		<Description>Snes9x's savestate format load functionality</Description>
+		<Description>Snes9x's savestate load and S-RAM extract functionality</Description>
 		<Company>KST</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -17,7 +17,6 @@
 		<Platforms>AnyCPU</Platforms>
 		<PackageIcon>Logo.png</PackageIcon>
 		<PackageProjectUrl>http://rosetta-stone.xeth.de</PackageProjectUrl>
-		<Copyright></Copyright>
 		<RepositoryType>Rosetta Stone</RepositoryType>
 	</PropertyGroup>
 
@@ -27,20 +26,22 @@
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
 		<DebugType>full</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
 		<Optimize>true</Optimize>
 		<DebugType>embedded</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramCommons" Version="1.1.0-a3" />
+		<PackageReference Include="CCX.SramCommons" Version="1.2.0-a1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SramCommons\SramCommons.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,9 +68,5 @@
 	    <Pack>True</Pack>
 	    <PackagePath></PackagePath>
 	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\SramCommons\SramCommons.csproj" />
 	</ItemGroup>
 </Project>
