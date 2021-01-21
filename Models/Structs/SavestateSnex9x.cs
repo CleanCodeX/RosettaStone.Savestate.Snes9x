@@ -31,7 +31,7 @@
 		public FileBlock RAM; 
 
 		// S-RAM
-		// The "Save RAM" (SRAM) data, used by cartridges.
+		// The "Save RAM" (S-RAM) data, used by cartridges.
 		public FileBlock SRA; 
 
 		/* Fill-RAM In the SNES9x code, "FillRAM" is a pointer to 32 KB of scratch memory. Whenever the 65c816 does a write access to addresses $xx:0000..$xx:7FFF, the value is also written into this array.With "FillRAM" the developers can access registers by address rather than by name. */

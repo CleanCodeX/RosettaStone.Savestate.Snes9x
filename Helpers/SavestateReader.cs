@@ -53,7 +53,7 @@ namespace RosettaStone.Savestate.Snes9x.Helpers
 				DMA = ReadFileBlock(ms),
 				VRA = ReadFileBlock(ms),
 				RAM = ReadFileBlock(ms),
-				SRA = ReadFileBlock(ms) // SRAM
+				SRA = ReadFileBlock(ms) // S-RAM
 			};
 
 			if(includeOffset == LoadIncludeOffset.SRA)
