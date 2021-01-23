@@ -37,7 +37,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.SramCommons" Version="1.2.0-a1" />
+		<PackageReference Include="CCX.SramCommons" Version="1.2.1-a1" />
 	</ItemGroup>
 
 	<ItemGroup>
