@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30803.129
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Savestate.Snes9x", "Savestate.Snes9x.csproj", "{DB05BFF1-EB14-4837-99EF-F54B027E93B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WRAM.Snes9x", "WRAM.Snes9x.csproj", "{DB05BFF1-EB14-4837-99EF-F54B027E93B9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IO", "..\IO\IO.csproj", "{8D3051AA-D82D-4061-AF11-A17D114878AC}"
 EndProject

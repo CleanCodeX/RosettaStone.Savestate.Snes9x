@@ -11,9 +11,9 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<RepositoryUrl>https://github.com/CleanCodeX/Savestate.Snes9x</RepositoryUrl>
-		<PackageId>CCX.Savestate.Snes9x</PackageId>
-		<Product>Savestate.Snes9x »Rosetta Stone«</Product>
+		<RepositoryUrl>https://github.com/CleanCodeX/WRAM.Snes9x</RepositoryUrl>
+		<PackageId>CCX.WRAM.Snes9x</PackageId>
+		<Product>WRAM.Snes9x »Rosetta Stone«</Product>
 		<Platforms>AnyCPU</Platforms>
 		<PackageIcon>Logo.png</PackageIcon>
 		<PackageProjectUrl>http://rosetta-stone.xeth.de</PackageProjectUrl>
