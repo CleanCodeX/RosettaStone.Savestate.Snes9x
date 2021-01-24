@@ -3,11 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Text;
 using Common.Shared.Min.Extensions;
-using RosettaStone.Savestate.Snes9x.Extensions;
-using RosettaStone.Savestate.Snes9x.Models.Structs;
-using SramCommons.Extensions;
+using Savestate.Snes9x.Extensions;
+using Savestate.Snes9x.Models.Structs;
+using IO.Extensions;
 
-namespace RosettaStone.Savestate.Snes9x.Helpers
+namespace Savestate.Snes9x.Helpers
 {
 	public static class SavestateReader
 	{

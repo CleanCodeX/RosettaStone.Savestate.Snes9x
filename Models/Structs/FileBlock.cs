@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace RosettaStone.Savestate.Snes9x.Models.Structs
+namespace Savestate.Snes9x.Models.Structs
 {
 	/// <summary>Snes9x savestate file block</summary>
 	public struct FileBlock

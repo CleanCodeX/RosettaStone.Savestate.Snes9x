@@ -3,22 +3,30 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.1.1-a1</Version>
+		<Version>0.2.0-a1</Version>
 		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, W-RAM, WRAM, Rosetta Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
-		<Authors>CleanCoderX</Authors>
-		<Description>Snes9x's savestate load and S-RAM extract functionality</Description>
+		<Authors>S. Krauter { CleanCoderX, XETH }</Authors>
+		<Description>Snes9x savestate load functionality</Description>
 		<Company>KST</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<RepositoryUrl>https://github.com/CleanCodeX/RosettaStone.Savestate.Snes9x</RepositoryUrl>
-		<PackageId>CCX.RosettaStone.Savestate.Snes9x</PackageId>
-		<Product>RosettaStone.Savestate.Snes9x</Product>
+		<RepositoryUrl>https://github.com/CleanCodeX/Savestate.Snes9x</RepositoryUrl>
+		<PackageId>CCX.Savestate.Snes9x</PackageId>
+		<Product>Savestate.Snes9x »Rosetta Stone«</Product>
 		<Platforms>AnyCPU</Platforms>
 		<PackageIcon>Logo.png</PackageIcon>
 		<PackageProjectUrl>http://rosetta-stone.xeth.de</PackageProjectUrl>
 		<RepositoryType>Rosetta Stone</RepositoryType>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CCX.IO" Version="1.0.0-a1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\IO\IO.csproj" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectCapability Include="DynamicDependentFile" />
@@ -35,14 +43,6 @@
 		<DebugType>embedded</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="CCX.SramCommons" Version="1.2.1-a1" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\SramCommons\SramCommons.csproj" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">

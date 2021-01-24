@@ -1,8 +1,8 @@
 ﻿using System.IO;
-using RosettaStone.Savestate.Snes9x.Models.Structs;
-using SramCommons.Extensions;
+using Savestate.Snes9x.Models.Structs;
+using IO.Extensions;
 
-namespace RosettaStone.Savestate.Snes9x.Extensions
+namespace Savestate.Snes9x.Extensions
 {
 	public static class SavestateExtensions
 	{

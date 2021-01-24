@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using RosettaStone.Savestate.Snes9x.Extensions;
+using Savestate.Snes9x.Extensions;
 
-namespace RosettaStone.Savestate.Snes9x.Helpers
+namespace Savestate.Snes9x.Helpers
 {
 	public static class SavestateHelper
 	{
