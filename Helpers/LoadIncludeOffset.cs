@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Savestate.Snes9x.Helpers
+namespace WRAM.Snes9x.Helpers
 {
 	[Flags]
 	public enum LoadIncludeOffset

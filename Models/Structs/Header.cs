@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace Savestate.Snes9x.Models.Structs
+namespace WRAM.Snes9x.Models.Structs
 {
 	/// <summary>Snes9x savestate header</summary>
 	[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1, Size = 14)]

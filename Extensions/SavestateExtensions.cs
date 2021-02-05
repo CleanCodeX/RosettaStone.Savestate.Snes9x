@@ -1,8 +1,8 @@
 ﻿using System.IO;
-using Savestate.Snes9x.Models.Structs;
 using IO.Extensions;
+using WRAM.Snes9x.Models.Structs;
 
-namespace Savestate.Snes9x.Extensions
+namespace WRAM.Snes9x.Extensions
 {
 	public static class SavestateExtensions
 	{

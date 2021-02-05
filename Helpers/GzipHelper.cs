@@ -4,7 +4,7 @@ using System.IO.Compression;
 using System.Text;
 using Common.Shared.Min.Extensions;
 
-namespace Savestate.Snes9x.Helpers
+namespace WRAM.Snes9x.Helpers
 {
 	public static class GzipHelper
 	{

@@ -1,4 +1,4 @@
-﻿namespace Savestate.Snes9x.Models.Structs
+﻿namespace WRAM.Snes9x.Models.Structs
 {
 	/// <summary>
 	/// Format according to specs at https://www.romhacking.net/documents/383/

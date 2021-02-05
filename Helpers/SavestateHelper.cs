@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using Savestate.Snes9x.Extensions;
+using WRAM.Snes9x.Extensions;
 
-namespace Savestate.Snes9x.Helpers
+namespace WRAM.Snes9x.Helpers
 {
 	public static class SavestateHelper
 	{

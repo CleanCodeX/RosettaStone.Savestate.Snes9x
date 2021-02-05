@@ -3,11 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Text;
 using Common.Shared.Min.Extensions;
-using Savestate.Snes9x.Extensions;
-using Savestate.Snes9x.Models.Structs;
 using IO.Extensions;
+using WRAM.Snes9x.Extensions;
+using WRAM.Snes9x.Models.Structs;
 
-namespace Savestate.Snes9x.Helpers
+namespace WRAM.Snes9x.Helpers
 {
 	public static class SavestateReader
 	{
@@ -52,7 +52,7 @@ namespace Savestate.Snes9x.Helpers
 				PPU = ReadFileBlock(ms),
 				DMA = ReadFileBlock(ms),
 				VRA = ReadFileBlock(ms),
-				RAM = ReadFileBlock(ms),
+				RAM = ReadFileBlock(ms), // W-RAM
 				SRA = ReadFileBlock(ms) // S-RAM
 			};
 
