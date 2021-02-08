@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using IO.Extensions;
+using Common.Shared.Min.Extensions;
 using WRAM.Snes9x.Models.Structs;
 
 namespace WRAM.Snes9x.Extensions
