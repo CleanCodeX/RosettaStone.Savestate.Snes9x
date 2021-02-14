@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using Common.Shared.Min.Extensions;
 using IO.Extensions;
+using IO.Helpers;
 using WRAM.Snes9x.Extensions;
 using WRAM.Snes9x.Models.Structs;
 

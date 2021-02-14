@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<Version>0.2.0-b3</Version>
+		<Version>0.2.0-b4</Version>
 		<PackageTags>Snes9x, Savestate, SNES, S-RAM, SRAM, W-RAM, WRAM, Rosetta Stone, Rosetta-Stone, Super Nintendo, Super Famicon</PackageTags>
 		<Authors>S. Krauter { CleanCoderX, XETH }</Authors>
 		<Description>Snes9x savestate load functionality</Description>
@@ -21,7 +21,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.IO" Version="1.0.0-b3" />
+		<PackageReference Include="CCX.IO" Version="1.0.0-b4" />
 	</ItemGroup>
 
 	<ItemGroup>
