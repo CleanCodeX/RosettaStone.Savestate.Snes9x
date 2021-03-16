@@ -21,7 +21,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CCX.IO" Version="1.0.0-b5" />
+		<PackageReference Include="CCX.IO" Version="1.0.0-c1" />
 	</ItemGroup>
 
 	<ItemGroup>
