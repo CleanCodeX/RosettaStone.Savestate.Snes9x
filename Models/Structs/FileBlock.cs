@@ -6,12 +6,12 @@ namespace WRAM.Snes9x.Models.Structs
 	public struct FileBlock
 	{
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
-		public char[] Name;
+		public char[]? Name;
 		public char Sepatator1;
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
-		public char[] Size;
+		public char[]? Size;
 		public char Sepatator2;
-		public byte[] Data;
+		public byte[]? Data;
 
 		// ReSharper disable once UnusedParameter.Local
 		public FileBlock(bool init)
